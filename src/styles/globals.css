@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply outline-dashed outline-2 outline-primary/20;
+  }
+
+  html,
+  body {
+    @apply scroll-smooth bg-base-100 text-base-content;
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      #444cf730 0,
+      #444cf730 2px,
+      transparent 2px
+    );
+    background-position: 20px 0, 20px 0, 0 0, 0 0;
+    /* background-position: 0 0; */
+    background-size: 20px 20px;
+    background-repeat: repeat;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: #2d2d35;
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+.hoverBox:hover {
+  @apply text-base-100;
+}
+
+.hoverBox:hover + .popBox {
+  @apply h-full w-full;
+  /* background-color: #010b28; */
+}
